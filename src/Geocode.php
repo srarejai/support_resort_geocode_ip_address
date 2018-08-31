@@ -10,8 +10,25 @@ namespace SupportResort\GeocodeIp;
 * It's responsible for geocoding an ip address and returning the location details.
 */
 
+//
 class Geocode
 {
+
+    /**
+    * The apikey.
+    *
+    * @var string
+    */
+    protected $apiKey;
+
+    /**
+    * Create a new Geocode instance.
+    *
+    */
+    public function __construct()
+    {
+       $this->apiKey = config('config.apikey');
+    }
 
     /**
     * Method to geocode ip address and fetch location.
@@ -22,13 +39,13 @@ class Geocode
     * @return xml, json, raw
     */
 
-    public function getGeoLocation($ip, $apikey, $format)
+    public function getGeoLocation($ip, $format)
     {
 
         // Check Number Of Arguments Passed
         $numargs = func_num_args();
 
-        if ($numargs !== 3) {
+        if ($numargs !== 2) {
           $result = [];
           $result['statusCode'] = '100';
           $result['statusMessage'] = 'Error: Invalid Number Of Arguments Passed';
@@ -47,8 +64,10 @@ class Geocode
 	      $valid = preg_match('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/', $ip);
 
 	      if($valid){
+          // Store apikey in local variable
+          $key = $this->apiKey;
           // Construct IpInfoDB URL
-          $apiurl = "http://api.ipinfodb.com/v3/ip-city/?key=".$apikey."&ip=".$ip."&format=".$format;
+          $apiurl = "http://api.ipinfodb.com/v3/ip-city/?key=".$key."&ip=".$ip."&format=".$format;
           // Geocode using URL
           $geo = file_get_contents($apiurl);
 	        // Return geooded details

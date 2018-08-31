@@ -20,7 +20,7 @@ Use following code in your controller
 
 $geo = new Geocode();
 $format = "json"; // can be raw, xml or json
-$geovalues = $geo->getGeoLocation($ip, "YOUR IPINFODB API KEY", $format);
+$geovalues = $geo->getGeoLocation($ip, $format);
 
 Results
 

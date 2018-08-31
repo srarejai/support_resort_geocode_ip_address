@@ -9,3 +9,7 @@ Route::get('geocode/test', function () {
 Route::get('geocode/{ip}/{apikey}/{format}', function () {
     return Geocode::getGeoLocation($ip, $apikey, $format);
 });
+
+Route::get('geocode/config', function () {
+    return config('config.apikey');
+});
