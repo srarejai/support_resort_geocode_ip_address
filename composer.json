@@ -1,5 +1,5 @@
 {
-    "name": "SupportResort/GeocodeIp",
+    "name": "SupportResort/Geocode_Ip",
     "description": "Demo package for geocoding visitors ip addresses.",
     "keywords": ["laravel", "demo"],
     "license": "MIT",
