@@ -12,7 +12,7 @@ class GeocodeServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-         __DIR__.'/config/config.php' => config_path('config.php'),
+         __DIR__.'/../config/config.php' => config_path('config.php'),
         ], 'config');
 
         require __DIR__ . '/Http/routes.php';
@@ -24,6 +24,6 @@ class GeocodeServiceProvider extends ServiceProvider
             return new Geocode();
         });
 
-        $this->mergeConfigFrom( __DIR__.'/config/config.php', 'config');
+        $this->mergeConfigFrom( __DIR__.'/../config/config.php', 'config');
     }
 }
