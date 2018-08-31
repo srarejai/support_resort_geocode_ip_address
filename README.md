@@ -18,7 +18,7 @@ Add following line to providers array in app.php:
 
   SupportResort\\Geocode\\GeocodeServiceProvider::class
 
-Code
+Code:
 
 $geoobject = new Geocode();
 
