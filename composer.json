@@ -1,0 +1,21 @@
+{
+    "name": "SupportResort/GeocodeIp",
+    "description": "Demo package for geocoding visitors ip addresses.",
+    "keywords": ["laravel", "demo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Support Resort",
+            "email": "s.jayakumar@vanillanetworks.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SupportResort\\GeocodeIp\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.0",
+        "illuminate/support": "~5"
+    }
+}
