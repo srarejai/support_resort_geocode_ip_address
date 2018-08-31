@@ -21,6 +21,7 @@ Add following line to providers array in app.php:
 Code
 
 $geoobject = new Geocode();
+
 $geo = $geoobject->getGeoLocation($ip, $format) // format can be raw, xml or json
 
 Results:
