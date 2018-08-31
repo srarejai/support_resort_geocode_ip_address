@@ -30,6 +30,8 @@ statusCode: 100 - statusMessage: Error: Invalid Number Of Arguments Passed
 
 statusCode: 101 - statusMessage: Invalid Result Format Requested
 
-statusCode: 102 - statusMessage: Invalid Ip Format
+statusCode: 102 - statusMessage: Invalid IP Address Format
+
+statusCode: ERROR - statusMessage: Invalid IP Address
 
 statusCode: OK  - statusMessage: IP Geocoded Successfully

@@ -77,7 +77,7 @@ class Geocode
           // Return error message if invalid ip is passed
           $result = [];
           $result['statusCode'] = '102';
-          $result['statusMessage'] = 'Invalid Ip Format';
+          $result['statusMessage'] = 'Invalid IP Address Format';
           return json_encode($result);
         }
     }
