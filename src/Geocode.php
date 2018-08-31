@@ -26,7 +26,6 @@ class Geocode
     {
 
         // Check Number Of Arguments Passed
-
         $numargs = func_num_args();
 
         if ($numargs !== 3) {
@@ -37,9 +36,7 @@ class Geocode
         }
 
         // Check format requested
-
-        if($format !== 'raw' && $format !== 'xml' && $format !== 'json')
-        {
+        if($format !== 'raw' && $format !== 'xml' && $format !== 'json'){
            $result = [];
            $result['statusCode'] = '101';
            $result['statusMessage'] = 'Invalid Result Format Requested';
@@ -47,27 +44,18 @@ class Geocode
         }
 
         // Check if passed ip is valid
-
 	      $valid = preg_match('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/', $ip);
 
-	      if($valid)
-	      {
+	      if($valid){
           // Construct IpInfoDB URL
-
           $apiurl = "http://api.ipinfodb.com/v3/ip-city/?key=".$apikey."&ip=".$ip."&format=".$format;
-
           // Geocode using URL
-
-	        $geo = file_get_contents($apiurl);
-
+          $geo = file_get_contents($apiurl);
 	        // Return geooded details
-
 	        return $geo;
 	      }
         else {
-
           // Return error message if invalid ip is passed
-
           $result = [];
           $result['statusCode'] = '102';
           $result['statusMessage'] = 'Invalid Ip Format';
