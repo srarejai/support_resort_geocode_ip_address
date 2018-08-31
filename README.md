@@ -23,9 +23,12 @@ Code
 $geoobject = new Geocode();
 $geo = $geoobject->getGeoLocation($ip, $format) // format can be raw, xml or json
 
-Results
+Results:
 
 statusCode: 100 - statusMessage: Error: Invalid Number Of Arguments Passed
+
 statusCode: 101 - statusMessage: Invalid Result Format Requested
+
 statusCode: 102 - statusMessage: Invalid Ip Format
+
 statusCode: OK  - statusMessage: IP Geocoded Successfully
