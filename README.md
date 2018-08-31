@@ -12,11 +12,11 @@ Execute the command:
 
 Include class on top using following line:
 
-  use SupportResort\\Geocode\\Geocode;
+  use SupportResort\\GeocodeIp\\Geocode;
 
 Add following line to providers array in app.php:
 
-  SupportResort\\Geocode\\GeocodeServiceProvider::class
+  SupportResort\\GeocodeIp\\GeocodeServiceProvider::class
 
 Code:
 
